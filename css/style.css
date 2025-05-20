@@ -1,0 +1,298 @@
+body {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #FAFAFA;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+
+.home-content {
+  max-width: 680px;
+}
+
+main {
+  margin: 120px auto;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  color: #2E2E2E;
+}
+
+.writing main {
+  font-size: 21px;
+  line-height: 34px;
+}
+
+main section, main ul, main h1, main h2, main h3, main h4, hr {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  list-style-type: none;
+  margin-left: none;
+}
+
+main ul {
+  padding-inline-start: 0px;
+  list-style: none;
+}
+
+main .name {
+  margin-bottom: 2px
+}
+
+main h3, h4 {
+  margin-top: 0;
+}
+
+main h4 {
+  margin-bottom: 0px;
+}
+
+main section {
+  margin-bottom: 37px;
+}
+
+main section .highlight {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+main section .highlight, main h1, main h2, main h3, main h4 {
+  color: #111;
+}
+
+main section .highlight:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 4px;
+  text-decoration-color: #2E2E2E;
+  text-decoration-skip-ink: none;
+}
+
+main section .highlightblank:hover {
+}
+
+ul li .date {
+  margin-left: 8px;
+  color: #888888;
+  opacity: 0.7;
+}
+
+a span.underweight {
+  font-size: 17pt;
+}
+
+main ul li {
+  font-size: 19px;
+  line-height: 32px;
+  color: #888888;
+}
+
+main .accomplishments {
+  margin-bottom: 37px;
+}
+
+main .accomplishments li {
+  list-style-type: disc;
+  margin-bottom: 6px;
+  margin-left: 20px;
+  text-wrap: balance;
+}
+
+.frontgreylistpatents {
+  margin-top: 8px;
+  margin-bottom: 37px;
+}
+
+main .frontgreylistpatents li {
+  list-style-type: disc;
+  margin-bottom: 6px;
+  margin-left: 20px;
+  text-wrap: pretty;
+}
+
+main .frontgreylistpatents li a, main .frontgreylistlinks li a {
+  color: #888888;
+}
+
+main .frontgreylistpatents li:hover a {
+  color: #ffffff;
+}
+
+main ul li a, main section a {
+  text-decoration: none;
+  color: #2E2E2E;
+}
+
+main ul li a:hover, main section a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #2E2E2E;
+}
+
+.frontlist li {
+  margin-bottom: 24px;
+}
+
+.frontgreylist li a {
+  color: #888888 !important;
+}
+
+main .frontgreylist li a:hover {
+  color: #fff;
+}
+
+main .frontgreylistpatents li:hover a, main .frontgreylistlinks li:hover a {
+  color: #2E2E2E;
+}
+
+.fronthr {
+  margin: 92px 0px;
+}
+
+main img, main video {
+  margin: 12px auto 37px;
+  width: 94%;
+  max-width: 780px;
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+main img.frontimg {
+  width: 33%;
+  margin: 0 0 42px 0;
+}
+
+main .frontimg {
+  text-align: left;
+  width: 100%;
+}
+
+main img.is-visible, main video.is-visible {
+  opacity: 1;
+}
+
+main img.inset {
+  max-width: 680px;
+}
+
+main hr {
+  margin-top: 37px;
+  margin-bottom: 37px;
+  opacity: 0.2;
+}
+
+.dark {
+  display: none;
+}
+.light {
+  display: block;
+}
+
+@keyframes fadeinall {
+0% {
+  opacity: 1; }
+97% {
+  opacity: 0; }
+98% {
+  opacity: 0;
+  -webkit-transform: translateY(0);
+  transform: translateY(0); }
+100% {
+  opacity: 0;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  z-index: -1; } }
+#fadein {
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  background-color: #FAFAFA;
+  z-index: 999;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation: fadeinall 1s normal both;
+  animation: fadeinall 1s normal both;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s; }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #171717;
+  }
+  main {
+    color: #A1A1A1;
+  }
+  main section .highlight, main h1, main h2, main h3, main h4 {
+    color: #DFDFDF;
+  }
+  main ul li {
+    color: #A1A1A1;
+  }
+  main ul li a, main section a {
+    color: #DFDFDF;
+  }
+  #fadein {
+    background-color: #171717;
+  }
+  .dark {
+    display: block;
+  }
+  .light {
+    display: none;
+  }
+  main ul li a:hover, main section .highlight:hover {
+    text-decoration-color: #444;
+  }
+  main section .frontgreylist li a:hover {
+    color: #000 !important;
+  }
+  main .frontgreylistpatents li:hover a, main .frontgreylistlinks li:hover a {
+    color: #FFF;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .lightentext {
+    color: #2E2E2E;
+  }
+  main .accomplishments li {
+    color: #2E2E2E;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  main {
+    margin: 48px 24px 64px 24px;
+  }
+  main img, main video {
+    width: 100%;
+    margin: 12px auto 37px;
+  }
+  main section .highlight:hover {
+    text-decoration: none;
+    text-underline-offset: 0px;
+    text-decoration-thickness: 0px;
+  }
+  main img.frontimg {
+    width: 40%;
+  }
+} 

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <meta charset="UTF-8" />
+	  <title>Charlie Deets - Product Designer</title>
+	  <meta name="viewport" content="width=device-width,initial-scale=1" />
+	  <meta name="description" content="" />
+	  <link rel="stylesheet" type="text/css" href="css/style.css?v=9" />
+
+	  <link rel="icon" href="assets/favicon/vitor_drawing.png" sizes="16x16" id="favicon-16">
+	  <link rel="icon" href="assets/favicon/vitor_drawing.png" sizes="32x32" id="favicon-32">
+	  <link rel="icon" href="assets/favicon/vitor_drawing.png" sizes="48x48" id="favicon-48">
+
+	  <meta property="og:title" content="Vitor Watanabe - Software Engineer" />
+	  <meta property="og:description" content="Founding Software Engineer at Dumont Travel. Previously Kovi." />
+	  <meta property="og:type" content="website" />
+	  <meta property="og:url" content="https://vitorwatanabe.com" />
+	  <meta property="og:image" content="https://vitorwatanabe.com/assets/about/vitor_drawing.png" />
+
+	  <style>
+		  html, body {
+		    height: 100%;
+		    margin: 0;
+		    padding: 0;
+		  }
+		  .home-container {
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+		    min-height: 100%;
+		  }
+	  </style>
+	</head>
+	<body>
+		<div id="fadein"></div>
+		<header>
+  		</header>
+		<div class="home-container">
+		  <div class="home-content">
+			  <main>
+			  	<div class="frontimg"><img class="frontimg dark" src="assets/about/vitor_drawing.png"><img class="frontimg light" src="assets/about/vitor_drawing.png"></div>
+			  	<h2>Vitor Watanabe</h2>
+			  	<section>I engineer products and systems with an emphasis on simplicity, practicality and craft. I have over 5 years of experience working on scaled products as well as taking products from zero to one.</section>
+
+			    <section><a class="highlight" target="_blank" href="https://www.linkedin.com/in/vitorwatanabe/">Contact me →</a></section>
+				
+			    <hr class="fronthr" />
+				
+			    <h2>Work</h2>
+
+			    <ul class="frontlist">
+				<li>
+					<a href="https://maactravel.com.br/" target="_blank">Dumont Travel ↗</a> <span class="date">2025 – now</span>
+					</br>
+					Founding Software Engineer
+				</li>
+			      <li>
+			      	<a href="https://kovi.com.br/" target="_blank">Kovi Tecnologia ↗</a> <span class="date">2019 – 2025</span>
+			        </br>
+			        Software Engineer
+			      </li>
+			      <li>
+			      	<a href="https://portal.fei.edu.br/fei-baja">FEI Baja</a> <span class="date">2018 – 2019</span>
+			        </br>
+			    	Electric Techincian
+			      </li>
+			    </ul>
+
+			    </br></br>
+
+			    <h2>Education</h2>
+			      <ul>
+			        <li><a href="https://portal.fei.edu.br/" target="_blank">University Center of FEI</a> - BA - Automation Engineering</li>
+			      </ul>
+
+			    </br></br>
+
+			    <!-- <h2>Links</h2>
+			    <ul class="frontgreylistlinks">
+			      <li><a href="/writings/" target="_blank">Writings</a></li>
+			    </ul> -->
+			  </main>
+		  </div>
+		</div>
+	  <footer></footer>
+	  <script type="text/javascript">
+	  window.onload = function(){
+	    setTimeout(function(){
+	      document.getElementById("fadein").remove();
+	    },1000);
+	  };
+	  </script>
+	  <script>
+	    function changeFavicons(theme) {
+	      document.getElementById('favicon-16').href = `assets/favicon/favicon-${theme}-16.png`;
+	      document.getElementById('favicon-32').href = `assets/favicon/favicon-${theme}-32.png`;
+	      document.getElementById('favicon-48').href = `assets/favicon/favicon-${theme}-48.png`;
+	    }
+	    const initialTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+	    changeFavicons(initialTheme);
+	    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+	      const newTheme = event.matches ? 'dark' : 'light';
+	      changeFavicons(newTheme);
+	    });
+	  </script>
+	<script>
+	document.addEventListener("DOMContentLoaded", function() {
+	  const observer = new IntersectionObserver((entries) => {
+	    entries.forEach(entry => {
+	      if (entry.isIntersecting) {
+	        entry.target.classList.add('is-visible');
+	      }
+	    });
+	  }, {
+	    threshold: 0.1
+	  });
+	  const elements = document.querySelectorAll('img, video');
+	  elements.forEach(el => {
+	    observer.observe(el);
+	  });
+	});
+	</script>
+	</body>
+</html> 
